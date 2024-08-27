@@ -86,8 +86,8 @@ jobs:
       image: image
       file: repo/task.yml
       params:
-        FILE: release
-        CONTENT: blarg-releasing-new-version
+        FILE: develop
+        CONTENT: blarg-new-dev-commit
       input_mapping:
         repo: repo
       output_mapping:
@@ -95,7 +95,6 @@ jobs:
     - put: repo
       params:
         repository: updated-repo
-    - put: repo
     - put: develop-branch-mergeback
       params:
         repository: merged-branch
