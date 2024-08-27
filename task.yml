@@ -13,4 +13,4 @@ params:
   CONTENT:
 
 run:
-  path: task.bash
+  path: repo/task.bash

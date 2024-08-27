@@ -1,13 +1,4 @@
 ---
-resource_types:
-- name: git
-  type: registry-image
-  source:
-    repository: us-west2-docker.pkg.dev/mapbu-cryogenics/dockerhub-proxy-cache/concourse/git-resource
-    tag: ubuntu
-    username: _json_key
-    password: ((gcp-tas-runtime-service-account/config-json))
-
 resources:
 - name: repo
   type: git
@@ -54,10 +45,8 @@ resources:
   type: docker-image
   icon: docker
   source:
-    repository: us-central1-docker.pkg.dev/cf-diego-pivotal/tas-runtime-dockerhub-mirror/cloudfoundry/tas-runtime-build
+    repository: cloudfoundry/tas-runtime-build
     tag: 'latest'
-    username: _json_key
-    password: ((gcp-tas-runtime-service-account/config-json))
 
 jobs:
 - name: test-mergeback
