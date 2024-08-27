@@ -6,7 +6,7 @@ set -eu
 . ci/shared/helpers/git-helpers.bash
 
 
-echo "$CONTENT" >> "$FILE"
+echo "$CONTENT" >> "repo/$FILE"
 
 git_configure_author
 git add "$FILE"
