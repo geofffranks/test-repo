@@ -3,7 +3,7 @@
 set -eu
 
 
-. ci/shared/helpers/git-heleprs.bash
+. ci/shared/helpers/git-helpers.bash
 
 
 echo "$CONTENT" >> "$FILE"
