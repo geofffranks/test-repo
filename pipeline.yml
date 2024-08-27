@@ -6,7 +6,7 @@ resources:
   source:
     branch: develop
     private_key: ((github-tas-runtime-bot/private-key))
-    uri: git@github.com:cloudfoundry/mapfs-release.git
+    uri: git@github.com:geofffranks/test-repo.git
     ignore_paths:
     - .github/
     - .gitignore
@@ -24,13 +24,13 @@ resources:
   source:
     branch: release
     private_key: ((github-tas-runtime-bot/private-key))
-    uri: git@github.com:cloudfoundry/mapfs-release.git
+    uri: git@github.com:geofffranks/test-repo.git
 
 - name: develop-branch-mergeback
   type: git
   icon: source-branch
   source:
-    uri: git@github.com:cloudfoundry/mapfs-release.git
+    uri: git@github.com:geofffranks/test-repo.git
     branch: develop
     private_key: ((github-tas-runtime-bot/private-key))
 
